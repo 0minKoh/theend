@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TheEnd</title>
+    <script>
+        (function() {
+            var lang = (navigator.language || navigator.userLanguage).toLowerCase().substr(0, 2);
+            
+            if (lang === 'ko') {
+                window.location.replace('/main/ko/');
+            } else if (lang === 'ja') {
+                window.location.replace('/main/jp/');
+            } else if (lang === 'zh') {
+                window.location.replace('/main/zh/');
+            } else {
+                window.location.replace('/main/en/'); // default 글로벌 영어
+            }
+        })();
+    </script>
+</head>
+<body style="background-color: #090A0F;"></body>
+</html>
