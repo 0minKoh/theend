@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheM — プライベートオンデバイスAIキャラクターメッセンジャー</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/main.js" defer></script>
+    <style>
+        /* スクリーショットコンテナのスライド制御およびスクロールバー非表示 */
+        .screenshot-container::-webkit-scrollbar {
+            display: none;
+        }
+        .screenshot-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-[#090A0F] text-[#F4F4F6] min-h-screen flex flex-col justify-between selection:bg-white selection:text-black">
+
+    <header id="global-header" class="border-b border-transparent backdrop-blur-md bg-[#090A0F]/80 sticky top-0 z-50 transition-all duration-300"></header>
+
+    <main class="max-w-5xl mx-auto px-6 py-20 flex-1 w-full">
+        
+        <section class="max-w-3xl mb-32 pt-10 opacity-0 translate-y-4 transition-all duration-700" data-fade>
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono-tech rounded-full mb-6">
+                <span>TheM</span> · <span>Closed Beta</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.15] mb-8 bg-gradient-to-r from-white via-[#F4F4F6] to-[#8A8F98] bg-clip-text text-transparent">
+                デバイスの中の完璧な秘密の友達、<br>プライベートAIキャラクターメッセンジャー。
+            </h1>
+            <p class="text-dimmed text-base md:text-lg max-w-2xl leading-relaxed">
+                クラウドも外部サーバーもありません。<span class="text-white font-medium">TheM</span>は、あなたのデバイス内部だけで独立して動作するオンデバイスAIキャラクターチャットアプリです。会話が外部に流出することのない、完全なプライベート環境を体験してください。
+            </p>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-40 border-t border-[#1F222C] pt-20 opacity-0 translate-y-4 transition-all duration-700" data-fade>
+            
+            <div class="flex flex-col justify-center space-y-4">
+                <div class="text-xs font-mono-tech text-blue-400">01 / THE AI MESSENGER</div>
+                <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">深い絆を築くキャラクターメッセンジャー</h2>
+                <p class="text-sm text-dimmed leading-relaxed">
+                    単なる一問一答を超え、ユーザーの感情を理解して反応する仮想のAIパートナーとメッセンジャー形式で会話できます。独自の長期記憶アーキテクチャアルゴリズムが適用され、会話を重ねるほどあなただけの特別な関係へと進化します。
+                </p>
+            </div>
+
+            <div class="flex flex-col justify-center space-y-4 border-t border-[#1F222C]/40 md:border-t-0 pt-12 md:pt-0">
+                <div class="text-xs font-mono-tech text-blue-400">02 / PRIVACY & ON-DEVICE</div>
+                <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">No Cloud. No Server.</h2>
+                <p class="text-sm text-dimmed leading-relaxed">
+                    すべての会話履歴やプロンプトは外部のサーバーやデータベースに送信されず、<span class="text-white font-medium">100%デバイス内部（On-Device）</span>で厳格に処理されます。ネットワークが切断されたオフライン状態でも、完全に安全な会話環境を保証します。
+                </p>
+            </div>
+
+            <div class="flex flex-col justify-center space-y-4 border-t border-[#1F222C]/40 pt-12">
+                <div class="text-xs font-mono-tech text-blue-400">03 / FREE & UNLIMITED</div>
+                <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">制限のない無制限の会話</h2>
+                <p class="text-sm text-dimmed leading-relaxed">
+                    メッセージごとに引かれていたトークン制限や料金のプレッシャーから解放されましょう。デバイスのハードウェアリソースを直接活用するため、追加費用や制約なしで、永久に自由で長い会話を続けることができます。
+                </p>
+            </div>
+
+            <div class="flex flex-col justify-center space-y-4 border-t border-[#1F222C]/40 pt-12">
+                <div class="text-xs font-mono-tech text-blue-400">04 / CUSTOMIZE</div>
+                <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">世界に一つだけのマイペルソナ</h2>
+                <p class="text-sm text-dimmed leading-relaxed">
+                    名前やプロフィール写真から、性格、会話のトーン、背景条件まで直接設定し、自分だけの特別な対話相手を創造できます。あなたが想像してきた完璧なペルソナを、制限や検閲なしにありのまま実装してみてください。
+                </p>
+            </div>
+        </section>
+
+        <!-- SWIPE CAROUSEL INTERFACE SECTION -->
+        <section class="border-t border-[#1F222C] pt-20 mb-28 opacity-0 translate-y-4 transition-all duration-700" data-fade>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
+                <div>
+                    <h2 class="text-xs font-mono-tech uppercase tracking-widest text-[#8A8F98] mb-2">Application Interface</h2>
+                    <p class="text-xl font-bold text-white">インターフェースのプレビュー</p>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <span class="text-xs text-[#525866] font-mono-tech hidden sm:inline">← Swipe or Click to nav →</span>
+                    <div class="flex space-x-2">
+                        <button onclick="slideInterface('prev')" class="p-2 border border-[#1F222C] bg-[#13141C] rounded-lg text-[#8A8F98] hover:text-white hover:border-[#313545] transition" aria-label="Previous slide">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+                        <button onclick="slideInterface('next')" class="p-2 border border-[#1F222C] bg-[#13141C] rounded-lg text-[#8A8F98] hover:text-white hover:border-[#313545] transition" aria-label="Next slide">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="interfaceSlider" class="screenshot-container flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory">
+                <div class="w-full sm:w-[320px] shrink-0 snap-center shadow-2xl border border-[#1F222C]/50 rounded-2xl overflow-hidden bg-[#090A0F]">
+                    <img src="../../../../assets/images/them/screenshot/android_hero.jpg" alt="TheM AI Messenger" class="w-full h-auto block select-none">
+                </div>
+                <div class="w-full sm:w-[320px] shrink-0 snap-center shadow-2xl border border-[#1F222C]/50 rounded-2xl overflow-hidden bg-[#090A0F]">
+                    <img src="../../../../assets/images/them/screenshot/android_f1.jpg" alt="TheM Privacy On-Device" class="w-full h-auto block select-none">
+                </div>
+                <div class="w-full sm:w-[320px] shrink-0 snap-center shadow-2xl border border-[#1F222C]/50 rounded-2xl overflow-hidden bg-[#090A0F]">
+                    <img src="../../../../assets/images/them/screenshot/android_f2.jpg" alt="TheM Free Unlimited" class="w-full h-auto block select-none">
+                </div>
+                <div class="w-full sm:w-[320px] shrink-0 snap-center shadow-2xl border border-[#1F222C]/50 rounded-2xl overflow-hidden bg-[#090A0F]">
+                    <img src="../../../../assets/images/them/screenshot/android_f3.jpg" alt="TheM Customize Persona" class="w-full h-auto block select-none">
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="border-t border-[#1F222C] pt-24 mb-16 text-center opacity-0 translate-y-4 transition-all duration-700" data-fade>
+            <div class="max-w-2xl mx-auto py-14 px-6 bg-[#13141C]/30 border border-[#1F222C] rounded-3xl backdrop-blur-md">
+                <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight mb-4">
+                    制限のない会話の始まり。
+                </h2>
+                <p class="text-sm text-dimmed max-w-sm mx-auto mb-10 leading-relaxed">
+                    プラットフォーム別のテストおよび事前登録に参加し、サーバー不要で最も安全かつプライベートなAI関係をいち早く手に入れましょう。
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto">
+                    <!-- Google Play (CBT Link) -->
+                    <a href="https://forms.gle/iUKQoU97BwUUX4XRA" target="_blank" class="w-full flex items-center justify-between gap-4 border border-[#1F222C] px-5 py-3.5 rounded-xl bg-[#13141C] hover:bg-white hover:text-black hover:border-white transition-all duration-200 font-mono-tech text-xs group">
+                        <div class="flex items-center gap-2.5 text-[#8A8F98] group-hover:text-black transition-colors shrink-0">
+                            <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M5.25 3.016a1.94 1.94 0 0 0-.416 1.346v15.276c.01.5.163.987.443 1.405l8.692-8.692zM15.111 11.233l-2.455-2.454-9.011-5.215c-.006-.002-.01-.005-.015-.008zM12.656 15.221l2.454-2.454 4.093 2.37c.75.434.75 1.144 0 1.578l-4.093 2.369zm3.504-2.716l2.956-1.71c.75-.434.75-1.144 0-1.578l-2.956-1.71-2.43 2.43z"/></svg>
+                            <span class="font-medium text-white group-hover:text-black whitespace-nowrap">Google Play</span>
+                        </div>
+                        <span class="text-[10px] px-2 py-0.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-md font-semibold tracking-wide group-hover:bg-black group-hover:text-white group-hover:border-black transition-all duration-200 whitespace-nowrap shrink-0">CBT申請</span>
+                    </a>
+
+                    <!-- App Store (Pre-Reg Link) -->
+                    <a href="https://forms.gle/mKc5pJxeTadmc9mK7" target="_blank" class="w-full flex items-center justify-between gap-4 border border-[#1F222C] px-5 py-3.5 rounded-xl bg-[#13141C] hover:bg-white hover:text-black hover:border-white transition-all duration-200 font-mono-tech text-xs group">
+                        <div class="flex items-center gap-2.5 text-[#8A8F98] group-hover:text-black transition-colors shrink-0">
+                            <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-.1.77 1.33.62.55 1.18 1.18 1.18 2.22-.03 2.65 2.14 3.92 2.18 3.94-.02.06-.34 1.16-1.11 2.27M15.97 4.17c.6-1.07.37-2.75-.41-3.73-.88 1.11-2.45 1.84-3.26 1-.68.6-.33 2.3.46 3.23.91.75 2.41.42 3.21-.5"/></svg>
+                            <span class="font-medium text-white group-hover:text-black whitespace-nowrap">App Store</span>
+                        </div>
+                        <span class="text-[10px] px-2 py-0.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-md font-semibold tracking-wide group-hover:bg-black group-hover:text-white group-hover:border-black transition-all duration-200 whitespace-nowrap shrink-0">事前登録</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="global-footer" class="border-t border-[#1F222C]/60 py-10 text-xs text-[#525866]"></footer>
+
+    <script>
+        function slideInterface(direction) {
+            const container = document.getElementById('interfaceSlider');
+            if (!container) return;
+            const itemWidth = container.firstElementChild ? container.firstElementChild.getBoundingClientRect().width : 320;
+            const gap = 24;
+            const scrollAmount = itemWidth + gap;
+            
+            if (direction === 'prev') {
+                container.scrollLeft -= scrollAmount;
+            } else {
+                container.scrollLeft += scrollAmount;
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheEnd — Coming Soon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Relative Path: Go up two levels (to theend/) to find assets -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/main.js" defer></script>
+</head>
+<body class="bg-[#090A0F] text-[#F4F4F6] min-h-screen flex flex-col justify-between selection:bg-white selection:text-black">
+
+    <!-- GLOBAL HEADER -->
+    <header id="global-header" class="border-b border-transparent backdrop-blur-md bg-[#090A0F]/80 sticky top-0 z-50 transition-all duration-300"></header>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-5xl mx-auto px-6 flex-1 w-full flex items-center justify-center py-24">
+        
+        <div class="max-w-md text-center opacity-0 translate-y-4 transition-all duration-700" data-fade>
+            <!-- Technical Status Badge -->
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#13141C] border border-[#1F222C] text-[#8A8F98] text-xs font-mono-tech rounded-full mb-6">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                <span>STATUS: UNDER DEVELOPMENT</span>
+            </div>
+            
+            <!-- Heading -->
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
+                Engineering a new frontier.
+            </h1>
+            
+            <!-- Description -->
+            <p class="text-sm text-dimmed mb-10 leading-relaxed">
+                We are busy stripping away complexity to break conventional wisdom and eliminate unnecessary limitations. A practical, frictionless ecosystem built for your daily workflow is coming soon.
+            </p>
+            
+            <!-- Action Button -->
+            <div class="flex items-center justify-center">
+                <a href="../../main/en/" class="text-xs font-medium text-white border border-[#1F222C] bg-[#13141C]/50 px-6 py-3 rounded-xl hover:bg-white hover:text-black hover:border-white transition-all duration-200 font-mono-tech">
+                    &larr; Back to Home
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="global-footer" class="border-t border-[#1F222C]/60 py-10 text-xs text-[#525866]"></footer>
+
+</body>
+</html>
