@@ -108,7 +108,7 @@ function renderGlobalHeaderAndFooter() {
             <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
                 <div class="font-mono-tech">&copy; 2026 TheEnd. All rights reserved.</div>
                 <div class="flex space-x-6">
-                    <a href="https://github.com" class="hover:text-[#8A8F98] transition" target="_blank">GitHub</a>
+                    <a href="https://github.com/0minKoh/theend" class="hover:text-[#8A8F98] transition" target="_blank">GitHub</a>
                 </div>
             </div>
         `;
