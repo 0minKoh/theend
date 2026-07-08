@@ -18,40 +18,33 @@ function renderGlobalHeaderAndFooter() {
     const headerContainer = document.getElementById("global-header");
     const footerContainer = document.getElementById("global-footer");
 
-    // <html> 태그의 lang 속성을 읽어 기본 언어 설정 (기본값 en)
     let lang = document.documentElement.lang || 'en';
     if (lang.startsWith('ko')) lang = 'ko';
     else if (lang.startsWith('ja') || lang.startsWith('jp')) lang = 'jp';
     else if (lang.startsWith('zh')) lang = 'zh';
     else lang = 'en';
 
-    // ✨ [핵심] GitHub Pages 서브디렉토리(/theend) 자동 감지 로직
-    // github.io 호스팅 환경일 때는 '/theend'를 적용하고, 로컬(localhost) 환경일 때는 빈 문자열('') 처리
-    const BASE_PATH = window.location.hostname.includes('github.io') ? '/theend' : '';
+    // 🌟 Dynamically extract the exact GitHub Pages repository path prefix
+    const pathParts = window.location.pathname.split('/');
+    const BASE_PATH = window.location.hostname.includes('github.io') ? '/' + pathParts[1] : '';
 
-    // 다국어 사전 정의
     const i18n = {
         ko: { home: "Home", products: "Products", blog: "Blog", them: "TheM (Closed Beta)", iclaw: "iClaw (준비 중)", aclaw: "aClaw (준비 중)" },
         en: { home: "Home", products: "Products", blog: "Blog", them: "TheM (Closed Beta)", iclaw: "iClaw (Soon)", aclaw: "aClaw (Soon)" },
         jp: { home: "Home", products: "Products", blog: "Blog", them: "TheM (Closed Beta)", iclaw: "iClaw (Soon)", aclaw: "aClaw (Soon)" },
         zh: { home: "Home", products: "Products", blog: "Blog", them: "TheM (Closed Beta)", iclaw: "iClaw (Soon)", aclaw: "aClaw (Soon)" }
     };
-
     const text = i18n[lang];
 
-    // 현재 사용자가 TheM 상세 페이지에 있는지 판단하여 언어 탭 클릭 시 매끄러운 대칭 이동 구현
     const isTheM = window.location.pathname.includes('/products/the-m/');
     const getLangPath = (targetLang) => isTheM ? `${BASE_PATH}/products/the-m/main/${targetLang}/` : `${BASE_PATH}/main/${targetLang}/`;
 
-    // 헤더 주입 (모든 링크 내부 주소 앞단에 ${BASE_PATH} 변수를 주입합니다)
     if (headerContainer) {
         headerContainer.innerHTML = `
             <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
                 <a href="${BASE_PATH}/main/${lang}/" class="text-xl font-bold tracking-tight hover:opacity-80 transition font-mono-tech">TheEnd</a>
-                
                 <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-[#8A8F98]">
                     <a href="${BASE_PATH}/main/${lang}/" class="text-white">${text.home}</a>
-                    
                     <div class="relative group">
                         <button class="dropdown-trigger text-white flex items-center gap-1 transition">
                             ${text.products}
@@ -63,9 +56,7 @@ function renderGlobalHeaderAndFooter() {
                             <a href="${BASE_PATH}/products/a-claw/" class="block px-3 py-2.5 text-xs rounded-lg hover:bg-[#1F222C] hover:text-white transition font-mono-tech">${text.aclaw}</a>
                         </div>
                     </div>
-                    
                     <a href="${BASE_PATH}/blog/" class="hover:text-white transition">${text.blog}</a>
-                    
                     <div class="flex items-center space-x-1.5 font-mono-tech text-[11px] border border-[#1F222C] p-0.5 rounded-lg bg-[#13141C]/50">
                         <a href="${getLangPath('ko')}" class="px-2 py-0.5 rounded ${lang === 'ko' ? 'text-white bg-[#1F222C] font-semibold' : 'hover:text-white'} transition">KO</a>
                         <a href="${getLangPath('en')}" class="px-2 py-0.5 rounded ${lang === 'en' ? 'text-white bg-[#1F222C] font-semibold' : 'hover:text-white'} transition">EN</a>
@@ -77,7 +68,6 @@ function renderGlobalHeaderAndFooter() {
         `;
     }
 
-    // 푸터 주입
     if (footerContainer) {
         footerContainer.innerHTML = `
             <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
